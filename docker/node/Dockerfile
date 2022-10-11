@@ -20,6 +20,8 @@ FROM node:18.10.0-alpine3.15
 
 WORKDIR /app
 
+RUN npm i -g @nestjs/cli
+
 COPY --from=builder /app ./
 
 CMD ["npm", "run", "start"]
